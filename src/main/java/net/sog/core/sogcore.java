@@ -26,7 +26,7 @@ import org.apache.logging.log4j.Logger;
 @SuppressWarnings("removal")
 public class sogcore {
 
-    public static final String MOD_ID = "sogaddon";
+    public static final String MOD_ID = "soggtaddon";
     public static final Logger LOGGER = LogManager.getLogger();
     public static GTRegistrate SOG_REGISTRATE = GTRegistrate.create(sogcore.MOD_ID);
 
