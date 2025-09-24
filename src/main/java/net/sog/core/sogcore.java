@@ -9,8 +9,11 @@ import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 import com.gregtechceu.gtceu.api.sound.SoundEntry;
 
+import com.lowdragmc.lowdraglib.Platform;
+import com.tterrag.registrate.util.entry.RegistryEntry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -19,6 +22,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
+import net.sog.core.client.SoGClient;
+import net.sog.core.common.machine.SoGMachines;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -29,6 +34,7 @@ public class sogcore {
     public static final String MOD_ID = "soggtaddon";
     public static final Logger LOGGER = LogManager.getLogger();
     public static GTRegistrate SOG_REGISTRATE = GTRegistrate.create(sogcore.MOD_ID);
+    public static RegistryEntry<CreativeModeTab> SOG_CREATIVE_TAB = null;
 
     public sogcore() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -43,10 +49,10 @@ public class sogcore {
         modEventBus.addGenericListener(GTRecipeType.class, this::registerRecipeTypes);
         modEventBus.addGenericListener(MachineDefinition.class, this::registerMachines);
         modEventBus.addGenericListener(SoundEntry.class, this::registerSounds);
+        if (Platform.isClient()) {
+            SoGClient.init(modEventBus);
+        }
 
-        // Most other events are fired on Forge's bus.
-        // If we want to use annotations to register event listeners,
-        // we need to register our object like this!
         MinecraftForge.EVENT_BUS.register(this);
 
         SOG_REGISTRATE.registerRegistrate();
@@ -120,7 +126,7 @@ public class sogcore {
      * @param event
      */
     private void registerMachines(GTCEuAPI.RegisterEvent<ResourceLocation, MachineDefinition> event) {
-        // CustomMachines.init();
+        SoGMachines.init();
     }
 
     /**
