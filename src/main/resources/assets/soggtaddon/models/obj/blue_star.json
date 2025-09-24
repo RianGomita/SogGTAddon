@@ -1,0 +1,9 @@
+{
+  "flip_v": true,
+  "loader": "forge:obj",
+  "model": "soggtaddon:models/obj/star.obj",
+  "textures": {
+    "texture0": "soggtaddon:block/obj/space_layer",
+    "particle":"soggtaddon:block/obj/space_layer"
+  }
+}
