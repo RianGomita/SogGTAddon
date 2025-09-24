@@ -42,7 +42,7 @@ public class SoGMachines {
             .langValue("Honey Crystallization Chamber")
             .recipeModifiers(GTRecipeModifiers.OC_NON_PERFECT, GTRecipeModifiers.PARALLEL_HATCH)
             .rotationState(RotationState.NON_Y_AXIS)
-            .recipeType(GTRecipeTypes.AIR_SCRUBBER_RECIPES)
+            .recipeType(GTRecipeTypes.EXTRUDER_RECIPES)
             .appearanceBlock(CASING_STAINLESS_CLEAN)
             .pattern(definition -> FactoryBlockPattern.start()
                     .aisle("BBBBBBBBBBB", "BBBBBBBBBBB", "BBBBBBBBBBB", "BBBBBBBBBBB", "BBBBBBBBBBB", "BBBBBCBBBBB",
@@ -81,13 +81,14 @@ public class SoGMachines {
                             .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2)
                                     .setMinGlobalLimited(1))
                             .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS).setPreviewCount(1))
+                            .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setPreviewCount(1))
                             .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setPreviewCount(1))
                             .or(autoAbilities(true, false, true)))
                     .where('H', controller(blocks(definition.getBlock())))
                     .build())
             .model(
                     createWorkableCasingMachineModel(
-                            GTCEu.id("block/solid/machine_casing_clean_stainless_steel"),
+                            GTCEu.id("block/casings/solid/machine_casing_clean_stainless_steel"),
                             GTCEu.id("block/multiblock/fusion_reactor"))
                             .andThen(d -> d
                                     .addDynamicRenderer(

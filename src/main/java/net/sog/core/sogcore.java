@@ -24,6 +24,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import net.sog.core.client.SoGClient;
 import net.sog.core.common.machine.SoGMachines;
+import net.sog.core.common.registry.SoGRegistration;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -37,6 +38,7 @@ public class sogcore {
     public static RegistryEntry<CreativeModeTab> SOG_CREATIVE_TAB = null;
 
     public sogcore() {
+        init();
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
@@ -49,15 +51,17 @@ public class sogcore {
         modEventBus.addGenericListener(GTRecipeType.class, this::registerRecipeTypes);
         modEventBus.addGenericListener(MachineDefinition.class, this::registerMachines);
         modEventBus.addGenericListener(SoundEntry.class, this::registerSounds);
-        if (Platform.isClient()) {
-            SoGClient.init(modEventBus);
-        }
+
 
         MinecraftForge.EVENT_BUS.register(this);
 
-        SOG_REGISTRATE.registerRegistrate();
+        if (Platform.isClient()) {
+            SoGClient.init(modEventBus);
+        }
     }
-
+    public static void init() {
+        SoGRegistration.REGISTRATE.registerRegistrate();
+    }
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             LOGGER.info("Hello from common setup! This is *after* registries are done, so we can do this:");

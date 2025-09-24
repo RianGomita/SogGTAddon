@@ -1,0 +1,11 @@
+{
+  "loader": "forge:obj",
+  "flip_v": true,
+  "model": "soggtaddon:models/obj/rings.obj",
+  "textures": {
+    "texture0": "soggtaddon:block/obj/purple_star_layer",
+    "texture1": "soggtaddon:block/obj/purple_star_layer",
+    "texture2": "soggtaddon:block/obj/purple_star_layer",
+    "particle":"soggtaddon:block/obj/purple_star_layer"
+  }
+}
