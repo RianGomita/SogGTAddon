@@ -1,3 +1,11 @@
 {
-  "block.soggtaddon.honey_crystallization_chamber": "Honey Crystallization Chamber"
+  "block.soggtaddon.honey_crystallization_chamber": "Honey Crystallization Chamber",
+  "item.soggtaddon.basic_fuel_rod": "Basic Fuel Rod",
+  "material.soggtaddon.eighty_five_percent_pure_nevvonian_steel": "§6Eighty Five Percent Pure Nevvonian Steel",
+  "material.soggtaddon.extremely_modified_space_grade_steel": "§cExtremely Modified Space Grade Steel",
+  "material.soggtaddon.phoenix_enriched_naquadah": "§6Phoenix Enriched Naquadah",
+  "material.soggtaddon.phoenix_enriched_tritanium": "§cPhoenix Enriched Tritanium",
+  "material.soggtaddon.quantum_coolant": "§bQuantum Coolant",
+  "soggtaddon.tooltip.requires_fluid": "Needs: %s",
+  "tagprefix.nanites": "%s Nanites"
 }

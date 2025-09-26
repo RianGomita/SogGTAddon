@@ -20,8 +20,8 @@ public class SoGMaterialFlags {
             .materialAmount(GTValues.M / 4)
             .unificationEnabled(true)
             .generateItem(true)
-            .materialIconType(PhoenixMaterialSet.nanites)
-            .generationCondition(mat -> mat.hasFlag(PhoenixMaterialFlags.GENERATE_NANITES));
+            .materialIconType(SoGMaterialSet.nanites)
+            .generationCondition(mat -> mat.hasFlag(SoGMaterialFlags.GENERATE_NANITES));
 
     public static void init() {}
 }

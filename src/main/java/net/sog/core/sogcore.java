@@ -25,9 +25,12 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import net.sog.core.client.SoGClient;
+import net.sog.core.common.data.SoGItems;
+import net.sog.core.common.data.materials.SoGMaterialFlags;
 import net.sog.core.common.data.recipeConditions.FluidInHatchCondition;
 import net.sog.core.common.machine.SoGMachines;
 import net.sog.core.common.registry.SoGRegistration;
+import net.sog.core.datagen.SoGDatagen;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -65,6 +68,9 @@ public class sogcore {
     }
     public static void init() {
         SoGRegistration.REGISTRATE.registerRegistrate();
+        SoGItems.init();
+        SoGMaterialFlags.init();
+        SoGDatagen.init();
     }
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
@@ -78,6 +84,7 @@ public class sogcore {
                         FluidInHatchCondition::new,
                         FluidInHatchCondition.CODEC));
     }
+
 
     private void clientSetup(final FMLClientSetupEvent event) {
         LOGGER.info("Hey, we're on Minecraft version {}!", Minecraft.getInstance().getLaunchedVersion());
