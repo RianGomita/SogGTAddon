@@ -26,7 +26,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import net.sog.core.client.SoGClient;
 import net.sog.core.common.data.SoGItems;
+import net.sog.core.common.data.SoGRecipeTypes;
 import net.sog.core.common.data.materials.SoGMaterialFlags;
+import net.sog.core.common.data.materials.SoGMaterials;
 import net.sog.core.common.data.recipeConditions.FluidInHatchCondition;
 import net.sog.core.common.machine.SoGMachines;
 import net.sog.core.common.registry.SoGRegistration;
@@ -118,7 +120,7 @@ public class sogcore {
      * @param event
      */
     private void addMaterials(MaterialEvent event) {
-        // CustomMaterials.init();
+        SoGMaterials.register();
     }
 
     /**
@@ -137,7 +139,7 @@ public class sogcore {
      * @param event
      */
     private void registerRecipeTypes(GTCEuAPI.RegisterEvent<ResourceLocation, GTRecipeType> event) {
-        // CustomRecipeTypes.init();
+        SoGRecipeTypes.init();
     }
 
     /**
@@ -160,3 +162,4 @@ public class sogcore {
         // CustomSounds.init();
     }
 }
+
