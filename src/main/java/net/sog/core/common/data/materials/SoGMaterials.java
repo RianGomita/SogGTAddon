@@ -17,8 +17,8 @@ public class SoGMaterials {
     public static Material QuantumCoolant;
     public static Material ExtremelyModifiedSpaceGradeSteel;
     public static Material EightyFivePercentPureNevvonianSteel;
-    public static Material SoG_ENRICHED_TRITANIUM;
-    public static Material SoG_ENRICHED_NAQUADAH;
+    public static Material ENRICHED_TRITANIUM;
+    public static Material SILLY_ENRICHED_NAQUADAH;
     public static Material ALUMINFROST;
 
     public static void register() {
@@ -49,8 +49,8 @@ public class SoGMaterials {
                 .toolStats(new ToolProperty(12.0F, 7.0F, 3072, 6,
                         new GTToolType[] { GTToolType.DRILL_IV, GTToolType.MINING_HAMMER }))
                 .buildAndRegister();
-        SoG_ENRICHED_TRITANIUM = new Material.Builder(
-                sogcore.id("SoG_enriched_tritanium"))
+        ENRICHED_TRITANIUM = new Material.Builder(
+                sogcore.id("enriched_tritanium"))
                 .ingot()
                 .color(0xFF0000)
                 .secondaryColor(0x840707)
@@ -58,8 +58,8 @@ public class SoGMaterials {
                 .formula("PET")
                 .iconSet(SoGMaterialSet.ALMOST_PURE_NEVONIAN_STEEL)
                 .buildAndRegister();
-        SoG_ENRICHED_NAQUADAH = new Material.Builder(
-                sogcore.id("SoG_enriched_naquadah"))
+        SILLY_ENRICHED_NAQUADAH = new Material.Builder(
+                sogcore.id("silly_enriched_naquadah"))
                 .ingot()
                 .color(0xFFA500)
                 .secondaryColor(0x000000)
