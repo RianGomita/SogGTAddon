@@ -5,8 +5,6 @@ import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 
 import net.minecraft.data.recipes.FinishedRecipe;
-import net.sog.core.common.data.SoGMachineRecipes;
-import net.sog.core.common.data.materials.SoGElements;
 
 import java.util.function.Consumer;
 
@@ -33,14 +31,8 @@ public class SoGGTAddon implements IGTAddon {
     }
 
     @Override
-    public void registerElements() {
-        IGTAddon.super.registerElements();
-        SoGElements.init();
-    }
-
-    @Override
     public void addRecipes(Consumer<FinishedRecipe> provider) {
-        SoGMachineRecipes.init(provider);
+        // CustomRecipes.init(provider);
     }
 
     // If you have custom ingredient types, uncomment this & change to match your capability.
