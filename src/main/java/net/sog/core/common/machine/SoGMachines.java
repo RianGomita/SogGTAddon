@@ -14,20 +14,18 @@ import com.gregtechceu.gtceu.api.pattern.Predicates;
 import com.gregtechceu.gtceu.api.registry.registrate.MachineBuilder;
 import com.gregtechceu.gtceu.common.data.*;
 
-
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.sog.core.client.renderer.machine.multiblock.SoGDynamicRenderHelpers;
+import net.sog.core.sogcore;
 
 import java.util.Locale;
 import java.util.function.BiFunction;
 
-import net.sog.core.client.renderer.machine.multiblock.SoGDynamicRenderHelpers;
-import net.sog.core.sogcore;
 import static com.gregtechceu.gtceu.api.pattern.Predicates.*;
 import static com.gregtechceu.gtceu.common.data.GTBlocks.*;
 import static com.gregtechceu.gtceu.common.data.models.GTMachineModels.*;
 import static net.sog.core.common.registry.SoGRegistration.REGISTRATE;
-
 
 @SuppressWarnings("all")
 public class SoGMachines {
@@ -35,7 +33,6 @@ public class SoGMachines {
     static {
         REGISTRATE.creativeModeTab(() -> sogcore.SOG_CREATIVE_TAB);
     }
-
 
     public static final MultiblockMachineDefinition HONEY_CRYSTALLIZATION_CHAMBER = REGISTRATE
             .multiblock("honey_crystallization_chamber", WorkableElectricMultiblockMachine::new)
@@ -110,8 +107,6 @@ public class SoGMachines {
         }
         return definitions;
     }
-
-
 
     public static void init() {}
 }

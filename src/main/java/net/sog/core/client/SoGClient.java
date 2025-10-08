@@ -2,14 +2,11 @@ package net.sog.core.client;
 
 import com.gregtechceu.gtceu.client.renderer.machine.DynamicRenderManager;
 
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ModelEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.sog.core.client.renderer.machine.ArtificialStarRender;
 import net.sog.core.client.renderer.machine.EyeOfHarmonyRender;
 import net.sog.core.client.renderer.machine.PlasmaArcFurnaceRender;
@@ -37,5 +34,4 @@ public class SoGClient {
         event.register(PlasmaArcFurnaceRender.RINGS_MODEL_RL);
         event.register(PlasmaArcFurnaceRender.SPHERE_MODEL_RL);
     }
-
 }

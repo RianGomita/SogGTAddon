@@ -30,6 +30,7 @@ public class SoGGTAddon implements IGTAddon {
     public void registerTagPrefixes() {
         // CustomTagPrefixes.init();
     }
+
     @Override
     public void registerElements() {
         IGTAddon.super.registerElements();

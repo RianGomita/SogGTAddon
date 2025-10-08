@@ -1,11 +1,10 @@
 package net.sog.core.datagen;
 
-
-import com.tterrag.registrate.providers.ProviderType;
 import net.sog.core.datagen.lang.SoGLangHandler;
 
-import static net.sog.core.common.registry.SoGRegistration.REGISTRATE;
+import com.tterrag.registrate.providers.ProviderType;
 
+import static net.sog.core.common.registry.SoGRegistration.REGISTRATE;
 
 public class SoGDatagen {
 
