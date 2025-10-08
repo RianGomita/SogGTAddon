@@ -19,12 +19,12 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.sog.core.common.data.SoGMaterialRegistry;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import net.sog.core.common.data.SoGMaterialRegistry;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -76,7 +76,7 @@ public class FluidInHatchCondition extends RecipeCondition {
 
     public Fluid getFluid() {
         if (cachedFluid == null) {
-            cachedFluid = ForgeRegistries.FLUIDS.getValue(new ResourceLocation(fluidString));
+            cachedFluid = ForgeRegistries.FLUIDS.getValue(ResourceLocation.parse(fluidString));
         }
         return cachedFluid;
     }
@@ -88,7 +88,7 @@ public class FluidInHatchCondition extends RecipeCondition {
         if (fluid != null) {
             Material material = SoGMaterialRegistry.getMaterial(fluid);
             String localizedName = material != null ? I18n.get(material.getDefaultTranslation()) :
-                    new ResourceLocation(fluidString).getPath().replace('_', ' ');
+                    ResourceLocation.parse(fluidString).getPath().replace('_', ' ');
 
             if (material == null) {
                 localizedName = Arrays.stream(localizedName.split(" "))

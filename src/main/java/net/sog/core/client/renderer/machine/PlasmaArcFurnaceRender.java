@@ -5,6 +5,7 @@ import com.gregtechceu.gtceu.client.renderer.machine.DynamicRender;
 import com.gregtechceu.gtceu.client.renderer.machine.DynamicRenderType;
 import com.gregtechceu.gtceu.client.util.ModelUtils;
 
+import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.Sheets;
@@ -23,6 +24,10 @@ import org.joml.Quaternionf;
 
 import java.util.List;
 
+import javax.annotation.ParametersAreNonnullByDefault;
+
+@ParametersAreNonnullByDefault
+@MethodsReturnNonnullByDefault
 public class PlasmaArcFurnaceRender extends DynamicRender<WorkableElectricMultiblockMachine, PlasmaArcFurnaceRender> {
 
     public static final PlasmaArcFurnaceRender INSTANCE = new PlasmaArcFurnaceRender();
@@ -32,7 +37,7 @@ public class PlasmaArcFurnaceRender extends DynamicRender<WorkableElectricMultib
 
     // CHANGE: Load two different models
     public static final ResourceLocation SPHERE_MODEL_RL = sogcore.id("obj/blue_star"); // Or a new model for the
-                                                                                            // sphere
+                                                                                        // sphere
     public static final ResourceLocation RINGS_MODEL_RL = sogcore.id("obj/rings");
 
     private static BakedModel sphereModel;
