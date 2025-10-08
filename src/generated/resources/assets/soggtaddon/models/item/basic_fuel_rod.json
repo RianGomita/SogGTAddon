@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "soggtaddon:item/basic_fuel_rod"
+  }
+}

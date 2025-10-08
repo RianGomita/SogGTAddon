@@ -1,3 +1,11 @@
 {
-  "block.soggtaddon.honey_crystallization_chamber": "ɹǝqɯɐɥƆ uoıʇɐzıןןɐʇsʎɹƆ ʎǝuoH"
+  "block.soggtaddon.honey_crystallization_chamber": "ɹǝqɯɐɥƆ uoıʇɐzıןןɐʇsʎɹƆ ʎǝuoH",
+  "item.soggtaddon.basic_fuel_rod": "poᴚ ןǝnℲ ɔısɐᗺ",
+  "material.soggtaddon.eighty_five_percent_pure_nevvonian_steel": "ןǝǝʇS uɐıuoʌʌǝN ǝɹnԀ ʇuǝɔɹǝԀ ǝʌıℲ ʎʇɥbıƎ9§",
+  "material.soggtaddon.enriched_naquadah": "ɥɐpɐnbɐN pǝɥɔıɹuƎ ʎןןıS9§",
+  "material.soggtaddon.enriched_tritanium": "ɯnıuɐʇıɹ⟘ pǝɥɔıɹuƎ",
+  "material.soggtaddon.extremely_modified_space_grade_steel": "ןǝǝʇS ǝpɐɹ⅁ ǝɔɐdS pǝıɟıpoW ʎןǝɯǝɹʇxƎɔ§",
+  "material.soggtaddon.quantum_coolant": "ʇuɐןooƆ ɯnʇuɐnὉq§",
+  "soggtaddon.tooltip.requires_fluid": "%s :spǝǝN",
+  "tagprefix.nanites": "sǝʇıuɐN %s"
 }
