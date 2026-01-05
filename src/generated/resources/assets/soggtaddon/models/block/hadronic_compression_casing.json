@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "soggtaddon:block/casings/hadronic_compression_casing"
+  }
+}

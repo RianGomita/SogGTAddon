@@ -24,6 +24,61 @@ public class SoGBlocks {
             })
             .simpleItem()
             .register();
+    public static final BlockEntry<Block> COLLIDER_STRUCTURAL_CASING = SoGRegistration.REGISTRATE
+            .block("collider_structural_casing", Block::new)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .lang("Collider Structural Casing")
+            .blockstate((ctx, prov) -> {
+                prov.simpleBlock(ctx.getEntry(),
+                        prov.models().cubeAll(ctx.getName(),
+                                prov.modLoc("block/casings/collider_structural_casing")));
+            })
+            .simpleItem()
+            .register();
+    public static final BlockEntry<Block> HADRONIC_COMPRESSION_CASING = SoGRegistration.REGISTRATE
+            .block("hadronic_compression_casing", Block::new)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .lang("Hadronic Compression Casing")
+            .blockstate((ctx, prov) -> {
+                prov.simpleBlock(ctx.getEntry(),
+                        prov.models().cubeAll(ctx.getName(),
+                                prov.modLoc("block/casings/hadronic_compression_casing")));
+            })
+            .simpleItem()
+            .register();
+    public static final BlockEntry<Block> HIGH_ENERGY_COLLIDER_CASING = SoGRegistration.REGISTRATE
+            .block("high_energy_collider_casing", Block::new)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .lang("High Energy Collider Casing")
+            .blockstate((ctx, prov) -> {
+                prov.simpleBlock(ctx.getEntry(),
+                        prov.models().cubeAll(ctx.getName(),
+                                prov.modLoc("block/casings/high_energy_collider_casing")));
+            })
+            .simpleItem()
+            .register();
+    public static final BlockEntry<Block> QUANTUM_FIELD_STABILIZATION_CASING = SoGRegistration.REGISTRATE
+            .block("quantum_field_stabilization_casing", Block::new)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .lang("Quantum Field Stabilization Casing")
+            .blockstate((ctx, prov) -> {
+                prov.simpleBlock(ctx.getEntry(),
+                        prov.models().cubeAll(ctx.getName(),
+                                prov.modLoc("block/casings/quantum_field_stabilization_casing")));
+            })
+            .simpleItem()
+            .register();
+    public static final BlockEntry<Block> ULTRA_DENSE_COLLIDER_CASING = SoGRegistration.REGISTRATE
+            .block("ultra_dense_collider_casing", Block::new)
+            .initialProperties(() -> Blocks.IRON_BLOCK)
+            .lang("Ultra Dense Collider Casing")
+            .blockstate((ctx, prov) -> {
+                prov.simpleBlock(ctx.getEntry(),
+                        prov.models().cubeAll(ctx.getName(),
+                                prov.modLoc("block/casings/ultra_dense_collider_casing")));
+            })
+            .simpleItem()
+            .register();
 
     public static void init() {
     }

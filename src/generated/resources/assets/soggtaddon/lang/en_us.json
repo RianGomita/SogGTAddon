@@ -1,6 +1,11 @@
 {
+  "block.soggtaddon.collider_structural_casing": "Collider Structural Casing",
+  "block.soggtaddon.hadronic_compression_casing": "Hadronic Compression Casing",
+  "block.soggtaddon.high_energy_collider_casing": "High Energy Collider Casing",
   "block.soggtaddon.honey_crystallization_chamber": "Honey Crystallization Chamber",
-  "item.soggtaddon.basic_fuel_rod": "Basic Fuel Rod",
+  "block.soggtaddon.quantum_field_stabilization_casing": "Quantum Field Stabilization Casing",
+  "block.soggtaddon.red_block_ezlych": "Ezlych's Red Block",
+  "block.soggtaddon.ultra_dense_collider_casing": "Ultra Dense Collider Casing",
   "material.soggtaddon.eighty_five_percent_pure_nevvonian_steel": "§6Eighty Five Percent Pure Nevvonian Steel",
   "material.soggtaddon.enriched_naquadah": "§6Silly Enriched Naquadah",
   "material.soggtaddon.enriched_tritanium": "Enriched Tritanium",

@@ -24,6 +24,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.sog.core.client.SoGClient;
+import net.sog.core.common.data.SoGBlocks;
 import net.sog.core.common.data.SoGItems;
 import net.sog.core.common.data.SoGRecipeTypes;
 import net.sog.core.common.data.materials.SoGMaterialFlags;
